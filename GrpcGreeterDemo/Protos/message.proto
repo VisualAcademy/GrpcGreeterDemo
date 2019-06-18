@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGreeterDemo";
+
+package Message;
+
+service MessageType {
+  rpc SayMessage (MessageRequest) returns (MessageReply) {}
+}
+
+message MessageRequest {
+  string name = 1;
+}
+
+message MessageReply {
+  string message = 1;
+}
